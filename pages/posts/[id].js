@@ -7,7 +7,8 @@ import utilStyles from '../../styles/utils.module.css';
 export default function Post({ postData }) {
   return (
       <Layout>
-          <p>Page has {postData?.id}</p>
+          <h1>{postData?.fileContents.title}</h1>
+          <p>{postData?.fileContents.content}</p>
       </Layout>
     );
 }
