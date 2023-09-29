@@ -7,7 +7,8 @@ import utilStyles from '../../styles/utils.module.css';
 export default function Post({ postData }) {
   return (
       <Layout>
-          <p>Page has {postData?.id}</p>
+          <h1>{postData?.fileContents.title}</h1>
+          <p>{postData?.fileContents.content}</p>
       </Layout>
     );
 }
@@ -22,6 +23,7 @@ export async function getStaticPaths() {
       },
     };
   });
+
   return {
     paths,
     fallback: false,
@@ -31,10 +33,11 @@ export async function getStaticPaths() {
 // returns post data based on ID
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id);
-    console.log("postdata is...", postData);
+    // console.log('postData', postData);
     return {
       props: {
         postData,
       },
     };
   }
+
