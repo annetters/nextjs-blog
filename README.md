@@ -1,5 +1,5 @@
 # About this project
-This is a NextJS practice blog to practice using dynamic routes and pulling in data from external JSON.
+This project is to get a hang of NextJS to make a simple blog. The blog using dynamic routes and fetches data from an external JSON source.
 
 ## Preview link
-https://nextjs-blog-nine-smoky-62.vercel.app/
+https://nextjs-blog-annetters.vercel.app
